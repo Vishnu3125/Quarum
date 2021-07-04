@@ -25,7 +25,7 @@ const Signup = () => {
           document.getElementById("myModal").classList.add("model_display");
         }
         else{
-          document.getElementById("email_exist").classList.remove("incorrect_hidden");
+          document.getElementById("email_exist").classList.remove("form-incorrect-hidden");
         }
       })
   }
@@ -39,7 +39,7 @@ const Signup = () => {
   return (
     <div className="parentcontainer">
       <img src="background.png" alt="Avatar" className="background_image"></img>
-      <header></header>
+      <header className="form-header"></header>
 
       <div id="myModal" className="modal">
         <div className="modal-content">
@@ -61,27 +61,28 @@ const Signup = () => {
             <label>
               <b>Name</b>
             </label>
-            <input type="text" placeholder="Enter Name" name="name" id="name" required></input>
+            <input className="form-input" type="text" placeholder="Enter Name" name="name" id="name" required></input>
             <br/>
             <label className="sign_title_margin">
               <b>Email</b>
             </label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required></input>
-            <span className="incorrect_hidden incorrect" id="email_exist"> Email already in use</span>
+            <input className="form-input" type="text" placeholder="Enter Email" name="email" id="email" required></input>
+            <span className="form-incorrect-hidden form-incorrect" id="email_exist"> Email already in use</span>
             <br/>
             <label className="sign_title_margin">
               <b>Password</b>
             </label>
             <input
+              className="form-input"
               type="password"
               placeholder="Enter Password"
               name="pass"
               id="pass"
               required></input>
             <br/><br/>
-            <button onClick={store} className="but-font but-enlarge">Sign Up</button>
+            <button onClick={store} className="but-enlarge form-button">Sign Up</button>
           </div>
-          <hr/>
+          <hr className="form-hr"/>
           <div className="container sign_container">
             Already have an account ?
             <a href="#" onClick={() => dispatch(login())}>

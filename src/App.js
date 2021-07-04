@@ -7,18 +7,18 @@ import Home from './features/pages/comps/Home'
 
 function App() {
 
-  let cook = decodeURIComponent(document.cookie)
-  const status = useSelector((state) => state.page.value)
+  let sec = sessionStorage.getItem("Auth");
   const dispatch = useDispatch()
+  const login_completed = useSelector((state) => state.page.value)
 
-  if (cook == "authorized") {
-    //dispatch(page())
+  if (sec == "authorized") {
+    dispatch(page())
   }
 
   return (
-    <div>
-      {status ? <Home></Home> : <Auth></Auth>}
-    </div>
+    <span>
+      {login_completed ? <Home></Home> : <Auth></Auth>}
+    </span>
   );
 }
 

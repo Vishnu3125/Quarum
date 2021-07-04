@@ -1,13 +1,17 @@
 import React from "react";
+import {useSelector, useDispatch} from 'react-redux';
+import Header from "./Header";
+
 
 const Home = () => {
      
     return(
-        <div>
+        <span>
+            <Header></Header>
             <h1>
-                Home Page !!
+                
             </h1>
-        </div>
+        </span>
     )
 }
 
