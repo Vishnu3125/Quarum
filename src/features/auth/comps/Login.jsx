@@ -16,16 +16,15 @@ const Login = () => {
     axios.post(`http://localhost:5000/login`, {
       Email: email,
       Pass: pass
-    })
-      .then(res => {
+    }).then(res => {
         const validify = res.data;
         //console.log(res)
 
-        if (validify == 0) {
+        if (validify === 0) {
           document.getElementById("email").classList.add("form-incorrect-input");
           document.getElementById("incorrect_email").classList.remove("form-incorrect-hidden");
         }
-        else if (validify == 1) {
+        else if (validify === 1) {
           document.getElementById("email").classList.remove("form-incorrect-input");
           document.getElementById("incorrect_email").classList.add("form-incorrect-hidden");
 
@@ -38,6 +37,7 @@ const Login = () => {
           sessionStorage.setItem("ID", validify._id);
           sessionStorage.setItem("name", validify.Name);
           sessionStorage.setItem("email", validify.Email);
+          sessionStorage.setItem("spaces", validify.Space)
           
           //document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
           //console.log(validify)
@@ -82,10 +82,10 @@ const Login = () => {
               required></input>
             <span className="form-incorrect-hidden form-incorrect" id="incorrect_pass"> Incorrect Password</span>
             <br/><br/>
-            <span className="psw">
+            {/* <span className="psw">
               <a href="#">Forgot password?</a>
-            </span>
-            <button className="form-button" onClick={verify}>Login</button>
+            </span> */}
+            <button className="form-button but-enlarge" onClick={verify}>Login</button>
           </div>
           <hr className="form-hr"/>
           <div className="container sign_container">New to Quarum ?

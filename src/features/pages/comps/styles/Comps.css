@@ -1,0 +1,36 @@
+.main-container-all {
+    padding-top: 80px;
+    background-color: #fafafa;
+}
+
+.home-question-ans-div {
+    background-color: #ffffff;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 60%;
+    height: 95px;
+    border: 0.5px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+    /* text-overflow: ellipsis */
+}
+
+.home-question{
+    margin: 10px 10px 0 10px;
+}
+
+.home-answer{
+    margin: 2px 10px 10px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.selected{
+    background-color: darkgray;
+}
+
+.non-selected{
+    margin: auto;
+    width: 60%;
+}

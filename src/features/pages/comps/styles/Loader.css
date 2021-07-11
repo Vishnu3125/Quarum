@@ -1,0 +1,44 @@
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .loader {
+    height: 80px;
+    padding-top: 40vh;
+    margin: auto;
+    display: flex;
+  }
+  .circle {
+    width: 10px;
+    height: 10px;
+    background: #ff4343;
+    border-radius: 50%;
+    animation: jump 1s linear infinite;
+    margin: 0 15px;
+  }
+  .caption {
+    margin: auto;
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+  }
+  #b {
+    animation-delay: 0.2s;
+  }
+  #c {
+    animation-delay: 0.4s;
+  }
+  @keyframes jump {
+    0% {
+      margin-top: 0;
+    }
+    35% {
+      margin-top: -20px;
+    }
+    70% {
+      margin-top: 0px;
+    }
+  }
+  
