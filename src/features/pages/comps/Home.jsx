@@ -25,7 +25,7 @@ const Home = () => {
                 {data ? data.map((dat) =>
                     <div className="home-question-ans-div">
                         <h3 className="home-question">{dat.question}</h3>
-                        <p className = "home-answer">{dat.answers[1].answer}</p>
+                        {/* <p className = "home-answer">{dat.answers[1].answer}</p> */}
                     </div>
                 ) : <Loader />}
         </div>

@@ -22,7 +22,7 @@ const Spaces = () => {
     return (
         <div className="main-container-all">
             <h1>Add new space</h1>
-            <form id="uploadForm" enctype="multipart/form-data" action="http://localhost:8080/upload" method="post">
+            <form id="uploadForm" enctype="multipart/form-data" action="http://localhost:8080/uploadNewSpace" method="post">
                 Name of the new space<br />
                 <input type="text" name="name" id="name" /> <br /><br />
 
